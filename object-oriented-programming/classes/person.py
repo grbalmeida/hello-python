@@ -1,4 +1,5 @@
 from datetime import datetime
+from random import randint
 
 class Person:
   current_year = int(datetime.strftime(datetime.now(), '%Y'))
@@ -69,3 +70,8 @@ class Person:
   def by_year_of_birth(cls, name, year_of_birth):
     age = cls.current_year - year_of_birth
     return cls(name, age)
+
+  @staticmethod
+  def generate_id():
+    rand = randint(10000, 19999)
+    return rand
