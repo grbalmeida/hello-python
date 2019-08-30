@@ -64,3 +64,8 @@ class Person:
   def get_year_of_birth(self):
     year_of_birth = Person.current_year - self.age
     return f'Year of birth: {year_of_birth}'
+
+  @classmethod
+  def by_year_of_birth(cls, name, year_of_birth):
+    age = cls.current_year - year_of_birth
+    return cls(name, age)
