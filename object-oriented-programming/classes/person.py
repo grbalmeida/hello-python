@@ -1,4 +1,8 @@
+from datetime import datetime
+
 class Person:
+  current_year = int(datetime.strftime(datetime.now(), '%Y'))
+
   def __init__(self, name, age, is_eating=False, is_speaking=False):
     self.name = name
     self.age = age
@@ -56,3 +60,7 @@ class Person:
 
     print(f'{self.name} stopped eating')
     self.is_eating = False
+
+  def get_year_of_birth(self):
+    year_of_birth = Person.current_year - self.age
+    return f'Year of birth: {year_of_birth}'
