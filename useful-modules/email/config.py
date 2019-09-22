@@ -1,0 +1,4 @@
+email = ''
+password = ''
+sender = ''
+subject = ''
